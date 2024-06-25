@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 50px;
+    z-index: 2;
+    /* Ensure logo is in front */
+    position: relative;
+}
+
+.logo span {
+    color: black;
+    font-size: 35px;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+
+.nav-links ul {
+    margin-left: 700px;
+    margin-top: -49px;
+}
+
+.nav-links ul li {
+    padding: 20px;
+    list-style: none;
+    text-align: right;
+    display: inline-block;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.information {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.circle {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: rgb(201, 188, 199); */
+    border-radius: 50%;
+    z-index: -1;
+    transform: rotate(0deg);
+    transition: all 0.4s ease;
+}
+
+.features {
+    position: absolute;
+    display: flex;
+    color: white;
+}
+.features div{
+    margin-left: 20px;
+}
+.features div p{
+    margin-top: 8px;
+}
+
+.features img {
+    width: 70px;
+    filter: invert(1); /* This will invert the colors, turning black to white */
+}
+
+.one {
+    top: 450px;
+    right: 750px;
+    transform: rotate(-180deg); 
+
+}
+
+.two{
+    top: 150px;
+    left: 350px;
+    transform: rotate(-90deg); 
+}
+
+.three{
+    bottom: 480px;
+    left: 700px;
+}
+
+.four{
+    bottom:150px ;
+    right: 350px;
+    transform: rotate(-270deg);
+
+}
+
+.mobile{
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.controls{
+    position: absolute;
+    left:85%;
+    top: 45%;
+    transform: rotateY(-50%);
+    text-align: center;
+}
+
+.controls h3{
+    margin: 10px 0;
+}
+#upBtn{
+    width: 15px;
+    cursor: pointer;
+}
+#downBtn{
+    width: 15px;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid white;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid white;
+    border-left: 500px solid white;
+    position: absolute;
+    z-index: -4;
+    top: 0;
+    left: 0;
+
+}
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------- */
+
+
+
+
+.loader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: #f7f9fb;
+    transition: opacity 0.6s, visibility 0.9s;
+}
+
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #7449f5;
+    animation: loading 0.75s ease infinite;
+    border-radius: 50%;
+}
+
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
